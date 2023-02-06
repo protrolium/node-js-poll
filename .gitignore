@@ -1,3 +1,6 @@
+# Ignore Site Assets
+views/img/*
+
 # Logs
 logs
 *.log
