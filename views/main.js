@@ -2,8 +2,8 @@ class Poll {
     constructor(root, title) {
         this.root = root;
         this.selected = sessionStorage.getItem("poll-selected");
-        // this.endpoint = "https://lv4-skin-selector.wn.r.appspot.com/poll";
-        this.endpoint = "http://localhost:3000/poll";
+        this.endpoint = "https://lv4.spiritbomb.ai/poll";
+        // this.endpoint = "http://localhost:3000/poll";
 
         this.root.insertAdjacentHTML("afterbegin", `
             <div class="poll__title">${ title }</div>
