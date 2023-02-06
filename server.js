@@ -4,15 +4,6 @@ const path = require('path');
 const app = express();
 const dataFile = path.join(__dirname, "data.json");
 
-// const { Storage } = require('@google-cloud/storage');
-
-// Creates a client
-// const storage = new Storage();
-
-// Reference to the data file in Google Cloud Storage
-// const bucketName = 'lv4-skin-selector.appspot.com';
-// const dataFile = 'data.json';
-
 // Support POSTing form data with uRL encoded
 app.use(express.urlencoded({ extended: true }));
 
@@ -34,10 +25,6 @@ app.get("/poll", async (req, res) => {
     // Local file-read
     let data = JSON.parse(await fs.readFile(dataFile, "utf-8"));
     
-    // Cloud file-read
-    // let [cloudJson] = await storage.bucket(bucketName).file(dataFile).download();
-    // let data = JSON.parse(cloudJson, "utf-8");
-    
     const totalVotes = Object.values(data).reduce((total, n) => total += n, 0);
 
     data = Object.entries(data).map(([label, votes]) => {
@@ -54,9 +41,6 @@ app.get("/poll", async (req, res) => {
 });
 
 app.post("/poll", async (req, res) => {
-    // let [cloudJson] = await storage.bucket(bucketName).file(dataFile).download();
-    // const data = JSON.parse(await (cloudJson, "utf-8"));
-    // console.log('retrieved' + data);
 
     // Local version
     const data = JSON.parse(await fs.readFile(dataFile, "utf-8"));
@@ -66,23 +50,6 @@ app.post("/poll", async (req, res) => {
 
     // Local file-write
     await fs.writeFile(dataFile, JSON.stringify(data));
-
-    // const file = storage.bucket(bucketName).file(dataFile);
-
-    // first attempt at cloud file-write
-    // await file.save(JSON.stringify(data), {
-    //     metadata: {
-    //         contentType: 'application/json'
-    //     }
-    // }).then(() => {
-    //     console.log('saved to cloud');
-    // });
-
-    // const saveJSON = (data) => {
-    //     const file = storage.bucket(bucketName).file(dataFile);
-    //     const contents = JSON.stringify(data);
-    //     return file.save(contents)
-    // }
 
     res.end();
 });
