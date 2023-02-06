@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LV4 Skin Selection</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit-icons.min.js"></script>
+    
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+</head>
+<body class="main uk-height-viewport">
+    
+    <header class="uk-width-1-1">
+
+        <!-- the mobile nav -->
+        <nav class="uk-navbar-container uk-navbar-transparent uk-hidden@m" uk-navbar>
+    
+            <div id="logo-header" class="uk-navbar-left uk-padding-small">
+                <a class="uk-text-lighter uk-text-large uk-text-emphasis" href="">
+                    <img src="img/sb-logo.png" width="46" alt="">
+                </a>
+            </div>
+            
+            <div class="uk-navbar-left uk-padding-small uk-hidden@m">
+                <a class="uk-text-light uk-text-large" href="">
+                    <span class="uk-text-uppercase">Spirit Bomb</span>
+                </a>
+            </div>
+    
+            <div class="uk-navbar-right uk-padding-small"></div>
+        </nav>
+    
+        <!-- the desktop nav -->
+        <nav class="uk-navbar-container uk-navbar-transparent uk-visible@m" uk-navbar>
+            
+            <div id="logo-header" class="uk-navbar-left uk-padding-small">
+                <a class="uk-text-lighter uk-text-large uk-text-emphasis" href="">
+                    <img src="img/sb-logo.png" width="46" alt="">
+                </a>
+            </div>
+    
+            <div class="uk-navbar-left uk-padding-small uk-visible@m">
+                <a class="uk-text-light uk-text-large uk-text-uppercase" href="">
+                    Spirit Bomb
+                </a>
+            </div>
+    
+            <div class="uk-navbar-right uk-padding-small"></div>
+    
+        </nav>
+    </header>
+
+    <div class="uk-width-1-1 collapse uk-flex uk-flex-wrap uk-flex-middle">
+        
+        <div class="uk-width-1-2@s ">
+            <div class="poll">
+            </div>
+        </div>
+    
+        <div class="uk-width-1-2@s uk-flex-stretch">
+
+            <div class="uk-child-width-1-2@s uk-flex uk-flex-wrap" uk-lightbox>
+                <div class="uk-cover-container">
+
+                    <a href="img/v1_front_vertical.jpg" data-caption="V1" data-fancybox="gallery">
+                        <img src="img/v1_front_vertical.jpg" alt="V1" style="top:68%;" uk-cover/>
+                        <canvas width="480" height="480"></canvas>
+                    </a>
+
+                </div>
+
+                <div class="uk-margin-remove-top uk-cover-container">
+
+                    <a href="img/v2_front_vertical.jpg" data-caption="V2" data-fancybox="gallery">
+                        <img src="img/v2_front_vertical.jpg" alt="V2" style="top:68%;" uk-cover/>
+                        <canvas width="480" height="480"></canvas>
+                    </a>
+
+                </div>
+
+                <div class="uk-margin-remove-top uk-cover-container">
+
+                    <a href="img/v3_front_vertical.jpg" data-caption="V3" data-fancybox="gallery">
+                        <img src="img/v3_front_vertical.jpg" alt="V3" style="top:68%;" uk-cover/>
+                        <canvas width="480" height="480"></canvas>
+                    </a>
+
+                </div>
+
+                <div class="uk-margin-remove-top uk-cover-container">
+
+                    <a href="img/v4_front_vertical.jpg" data-caption="V4" data-fancybox="gallery">
+                        <img src="img/v4_front_vertical.jpg" alt="V4" style="top:68%;" uk-cover/>
+                        <canvas width="480" height="480"></canvas>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
